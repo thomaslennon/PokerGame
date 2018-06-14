@@ -7,7 +7,7 @@ class PokerGameTest extends spock.lang.Specification {
 
         where:
         first | second || result
-        new Hand(Card.oneClubs, Card.twoDiamonds, Card.threeHearts, Card.fourSpades, Card.fiveClubs) | new Hand(Card.twoClubs, Card.twoDiamonds, Card.eightClubs, Card.fiveClubs, Card.aceClubs) || "Second Hand Wins. High Card: AC"
-        new Hand(Card.twoClubs, Card.twoDiamonds, Card.eightClubs, Card.fiveClubs, Card.aceClubs)| new Hand(Card.oneClubs, Card.twoDiamonds, Card.threeHearts, Card.fourSpades, Card.fiveClubs)  || "First Hand Wins. High Card: AC"
+        new Hand(Card.twoHearts, Card.threeDiamonds, Card.fiveSpades, Card.nineClubs, Card.fiveClubs) | new Hand(Card.twoClubs, Card.twoDiamonds, Card.eightClubs, Card.fiveClubs, Card.aceHearts) || "Second Hand Wins. High Card: AH"
+        new Hand(Card.twoClubs, Card.twoDiamonds, Card.eightClubs, Card.fiveClubs, Card.aceHearts)| new Hand(Card.fiveSpades, Card.sevenDiamonds, Card.threeHearts, Card.fourSpades, Card.fiveClubs)  || "First Hand Wins. High Card: AH"
     }
 }

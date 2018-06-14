@@ -2,9 +2,11 @@
 package ie.athlone.dojo;
 
 
-public enum Card {
+import java.util.Comparator;
 
-    oneHearts ("1H", 1),
+public enum Card implements Comparator<Card> {
+
+    //Hearts
     twoHearts ("2H", 2),
     threeHearts ("3H", 3),
     fourHearts ("4H", 4),
@@ -18,7 +20,7 @@ public enum Card {
     queenHearts("QH", 12),
     kingHearts("KH", 13),
     aceHearts("AH", 14),
-    oneDiamonds ("1D", 1),
+    //Diamonds
     twoDiamonds ("2D", 2),
     threeDiamonds ("3D", 3),
     fourDiamonds ("4D", 4),
@@ -32,7 +34,7 @@ public enum Card {
     queenDiamonds("QD", 12),
     kingDiamonds("KD", 13),
     aceDiamonds("AD", 14),
-    oneClubs ("1C", 1),
+    //Clubs
     twoClubs ("2C", 2),
     threeClubs ("3C", 3),
     fourClubs ("4C", 4),
@@ -46,7 +48,7 @@ public enum Card {
     queenClubs("QC", 12),
     kingClubs("KC", 13),
     aceClubs("AC", 14),
-    oneSpades ("1S", 1),
+    //Spades
     twoSpades ("2S", 2),
     threeSpades ("3S", 3),
     fourSpades ("4S", 4),
@@ -61,10 +63,8 @@ public enum Card {
     kingSpades("KS", 13),
     aceSpades("AS", 14);
 
-
-
-
     private String cardCode;
+    //Used to compare two cards together
     private int cardValue;
 
     Card(String code, int value){
@@ -77,6 +77,19 @@ public enum Card {
         return this.cardCode;
     }
 
+    @Override
+    public int compare(Card firstCard, Card secondCard){
+        int comparedValue;
+        if(firstCard.cardValue == secondCard.cardValue){
+            comparedValue = 0;
+        }else if (firstCard.cardValue < secondCard.cardValue){
+            comparedValue = -1;
+        }else{
+            comparedValue = 1;
+        }
+        return comparedValue;
 
+
+    }
 
 }
