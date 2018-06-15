@@ -2,7 +2,7 @@ package ie.athlone.dojo;
 
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.TreeSet;
+
 
 /**
  * This is a special collection of cards
@@ -21,7 +21,7 @@ public final class Hand{
     }
 
 
-    public Card highestCard(){
+    Card highestCard(){
         Card currentHighest =  (Card)(cards.toArray())[0];
         for(Card card : cards){
             int result = card.compare(card, currentHighest);

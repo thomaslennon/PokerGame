@@ -2,6 +2,10 @@ package ie.athlone.dojo;
 
 public class PokerGame {
 
+    private PokerGame(){
+        
+    }
+
     private static final String FIRST = "First";
     private static final String SECOND = "Second";
     private static final String HAND_WINS = " Hand Wins. ";
