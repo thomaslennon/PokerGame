@@ -74,4 +74,12 @@
 
         </plugins>
     </build>
+	
+	<properties>
+  <sonar.projectKey>thomaslennon_PokerGame</sonar.projectKey>
+  <sonar.organization>thomaslennon</sonar.organization>
+  <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+  <sonar.login>70fd367077bd0eace49fb250d054e8d7fb0a3e92</sonar.login>
+</properties>
+	
 </project>
