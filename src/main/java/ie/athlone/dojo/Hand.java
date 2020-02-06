@@ -9,7 +9,7 @@ import java.util.HashSet;
  */
 public final class Hand{
 
-    private Collection<Card> cards = new HashSet<>(5);
+    private final Collection<Card> cards = new HashSet<>(5);
 
     //Cards must be unique
     public Hand(Card card1, Card card2, Card card3, Card card4, Card card5){
